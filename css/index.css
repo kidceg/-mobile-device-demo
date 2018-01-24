@@ -1,0 +1,338 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100px;
+}
+
+body{
+	font-size: 0;
+	background-color: #F5F5F5;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+	-webkit-tap-highlight-color: 
+	rgba(0,0,0,0);
+}
+
+a {
+	text-decoration: none;
+}
+
+.banner {
+	width: 100%;
+	height: 1.77rem;
+}
+
+nav {	
+	margin-bottom: .11rem;
+	padding-top: .15rem;
+	padding-bottom:  .06rem;
+	background-color: #fff;
+}
+
+.icons {	
+	margin-left: .08rem;
+}
+
+.icons a {
+	display: inline-block;
+	width: .6rem;
+	margin-left: .13rem;
+	margin-right: .13rem;
+	font-size: .14rem;
+	text-align: center;
+	color: #353535;
+}
+
+.icons img {
+	width: .6rem;
+}
+
+.content {
+	height: 3.39rem;
+	padding-top: .12rem;
+	background-color: #fff;
+}
+
+.all-more {
+	display: inline-block;
+	margin: 0 0 .13rem .1rem;
+	font-size: .16rem;
+}
+
+.show {
+	position: relative;
+	height: .6rem;
+	padding: .13rem .1rem;
+}
+
+.show:active{
+	background-color: #DFDFDF;
+}
+
+.add-color {
+	background-color: #DFDFDF;
+}
+
+.show img {
+	width: .86rem;
+	height: .6rem;
+	border-radius: .05rem;
+}
+
+.show-words {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 1.89rem;
+	height: .6rem;
+	margin-left: .1rem;
+}
+
+.show a:first-child {
+	display: -webkit-box;
+	overflow: hidden;
+	font-size: .14rem;
+	line-height: .2rem;
+	text-overflow: ellipsis; 
+    -webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-align: justify;
+	color: #353535;
+}
+
+.show a:last-child {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: .12rem;
+	color: #888888;
+}
+
+.price {
+	position: absolute;
+	right: .13rem;
+	bottom: .12rem;
+	font-size: .15rem;
+	color: #E51C23;
+}
+
+.content hr {
+	position: absolute;
+	left: .1rem;
+	bottom: 0;
+	width: 3.4rem;
+	height: 1px;
+	border: none;
+	background-color: #DFDFDF;
+}
+
+.read-more {
+	display: inline-block;
+	width: 3.3rem;
+	padding: .15rem;
+	text-align: center;
+	font-size: .14rem;
+	color: #888888;
+}
+
+
+/* 购物券模块 */
+#screen_coupon {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#coupon {
+	display: inline-block;
+	position: absolute;
+	left: .3rem;
+	top: 1.4rem;
+	z-index: 3;
+	width: 3rem;
+	height: 3.7rem;
+}
+
+#closeCoupon {
+	position: absolute;
+	right: 0;
+	top: .17rem;
+	width: .35rem;
+	height: .35rem;
+	opacity: 0;
+}
+
+.coupon-head {
+	width: 100%;
+	height: 1.05rem;
+	overflow: hidden;
+}
+
+.coupon-head img {
+	width: 100%;
+}
+
+.coupon-title {
+	height: .33rem;
+	text-align: center;
+	background-color: #FFF4ED;
+}
+
+.coupon-title span {
+	position: relative;
+	top: .08rem; 
+	padding-left: .1rem;
+	padding-right: .1rem;
+	font-size: .16rem;
+	color: #F66D29;
+	background-color: #FFF4ED;
+}
+
+.coupon-title span::before ,
+.coupon-title span::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: .2rem;
+	height: .1rem;
+	border-bottom: 1px solid #F66D29;
+}
+
+.coupon-title span::before {
+    left:-.15rem; 
+}
+
+.coupon-title span::after {
+    right:-.15rem; 
+}
+
+.coupon-content {
+	height: 1.55rem;
+	background-color: #FFF4ED;
+}
+
+/* 隐藏滚动条 */
+.cards {
+	overflow: auto;
+	height: 100%;
+
+}
+.cards::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	margin-left: .06rem;
+	margin-bottom: .11rem;	
+	width: 100%;
+}
+
+.card-img {
+	position: relative;
+	display: inline-block;
+	width: .95rem;
+	height: .80rem;
+	vertical-align: top;
+	background-image: url(../images/coupon02.png);
+	background-size: 100%;
+}
+
+.rmb {
+	position: absolute;
+	left: .11rem; 
+	top: .22rem; 
+	display: inline-block;
+	font-size: .16rem;
+	color: #fff;	
+}
+
+.gift-price {
+	position: absolute;
+	left: .18rem;
+	bottom: .33rem;
+	width: .7rem;
+	text-align: center;
+	font-size: .32rem;
+	color: #fff;
+}
+
+.gift-note {
+	position: absolute;
+	left: .02rem;
+	bottom: .09rem;
+	width: 98%;
+	font-size: .12rem;
+	text-align: center;
+	color: #fff;
+}
+
+.card-content {
+	position: relative;
+	display: inline-block;
+	width: 1.78rem;
+	height: .8rem;
+	padding-left: .1rem;
+	background-color: #fff;
+}	
+	
+.card-name {
+	display: -webkit-box;
+	overflow: hidden;
+	width: 1.71rem;
+	margin-top: .03rem;
+	line-height: .2rem;
+	text-overflow: ellipsis; 
+	font-size: .14rem; 
+    -webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-align: justify;
+    color: #888888;
+}
+
+.card-date {
+	position: absolute;
+	bottom: .03rem;
+	margin-top: .02rem;
+	font-size: .1rem; 
+	color: #B2B2B2;
+}
+
+.coupon-footer {
+	position: relative;
+	text-align: center;
+	height: .75rem;
+	background-color:#FFF4ED; 
+	border-bottom-left-radius: .05rem;
+	border-bottom-right-radius: .05rem;
+}
+
+.coupon-footer button {
+	position: absolute;
+	top: calc(50% - .17rem);
+	left: calc(50% - .75rem);
+	width: 1.49rem;
+	height: .35rem;
+	font-size: .14rem;
+	border: none;
+	border-radius: .03rem;
+	color: #fff;
+	background-color: rgba(246, 109, 41, 1);
+}
+
+.coupon-footer button:active {
+	background-color: rgba(246, 109, 41, .8)
+}
