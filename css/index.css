@@ -231,6 +231,7 @@ nav {
 /* 隐藏滚动条 */
 .cards {
 	overflow: auto;
+	overflow-x: hidden;
 	height: 100%;
 
 }
