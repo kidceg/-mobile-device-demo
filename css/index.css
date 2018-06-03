@@ -148,6 +148,7 @@ nav {
 
 /* 购物券模块 */
 #screen_coupon {
+	display: block;
 	position: fixed;
 	left: 0;
 	top: 0;

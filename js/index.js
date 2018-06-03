@@ -38,55 +38,55 @@ var screen_coupon = document.getElementById('screen_coupon');
 
 // 方法二：使用cookie储存
 // 判断是否有对应cookie('firstLoad','yes')
-checkCookie();
-function checkCookie() {
-	if(getCookie('firstLoad') == '') {
-		alert('1');
-		screen_coupon.style.display = 'block';	
-		setCookie('firstLoad','yes','s20'); 
-	}
-	else { 	
-		alert('2');
-		screen_coupon.style.display = 'none';
-	}
-}
+// checkCookie();
+// function checkCookie() {
+// 	if(getCookie('firstLoad') == '') {
+// 		alert('1');
+// 		screen_coupon.style.display = 'block';	
+// 		setCookie('firstLoad','yes','s20'); 
+// 	}
+// 	else { 	
+// 		alert('2');
+// 		screen_coupon.style.display = 'none';
+// 	}
+// }
 
 
-function setCookie(name,value,time) {
-	var strsec = getsec(time);
-	var exp = new Date();
-	exp.setTime(exp.getTime() + strsec*1);
-	document.cookie = name + "="+ escape(value) + ";expires=" + exp.toGMTString();
-}
-function getsec(str) {
-	var str1 = str.substring(1,str.length)*1;
-	var str2 = str.substring(0,1);
-	if (str2 == "s") {
-		return str1*1000;
-	}
-	else if (str2 == "h") {
-		return str1*60*60*1000;
-	}
-	else if (str2 == "d") {
-		return str1*24*60*60*1000;
-	} } 
+// function setCookie(name,value,time) {
+// 	var strsec = getsec(time);
+// 	var exp = new Date();
+// 	exp.setTime(exp.getTime() + strsec*1);
+// 	document.cookie = name + "="+ escape(value) + ";expires=" + exp.toGMTString();
+// }
+// function getsec(str) {
+// 	var str1 = str.substring(1,str.length)*1;
+// 	var str2 = str.substring(0,1);
+// 	if (str2 == "s") {
+// 		return str1*1000;
+// 	}
+// 	else if (str2 == "h") {
+// 		return str1*60*60*1000;
+// 	}
+// 	else if (str2 == "d") {
+// 		return str1*24*60*60*1000;
+// 	} } 
 // 这是有设定过期时间的使用示例： 
 // s20是代表20秒 
 // h是指小时，如12小时则是：h12 
 // d是天数，30天则：d30 
 
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i].trim();
-    if (c.indexOf(name) == 0) {
-    	return c.substring(name.length,c.length);
-    }
-  }
-  return "";
-}
+// function getCookie(cname) {
+//   var name = cname + "=";
+//   var ca = document.cookie.split(';');
+//   for (var i = 0; i < ca.length; i++) {
+//     var c = ca[i].trim();
+//     if (c.indexOf(name) == 0) {
+//     	return c.substring(name.length,c.length);
+//     }
+//   }
+//   return "";
+// }
 
 // 删除cookie
 // delCookie("firstLoad");
@@ -107,6 +107,10 @@ function getCookie(cname) {
 var closeCoupon = document.getElementById('closeCoupon');
 // 触摸购物模块关闭按钮，购物模块消失
 closeCoupon.addEventListener('touchend', function () {
+		screen_coupon.style.display = 'none';
+});
+
+closeCoupon.addEventListener('click', function () {
 		screen_coupon.style.display = 'none';
 });
 
